@@ -12,11 +12,6 @@ a:hover{
     text-decoration: underline;
 }
 
-header{
-    display: flex;
-
-}
-
 nav ul{
     display: flex;
     padding: 0;
@@ -26,13 +21,6 @@ nav ul{
 nav ul li{
     text-decoration: underline;
     padding: 0vw 0vw 0vw 2vw;
-}
-
-main { 
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    width: 100%;   
 }
 
 figure {
@@ -57,16 +45,36 @@ figcaption {
     text-align: center;
 }
 
-p {
-    max-width: 220px;
-    padding: 5px 0 0 10px;
-    margin: 0;
+header { grid-area: header; }
+main { grid-area: main; }
+.para { 
+    grid-area: para;
+    max-width: 220px; 
+}
+footer { grid-area: footer; }
+
+#page {
+  display: grid;
+  grid-template-areas:
+  'header header'
+  'main  . '
+  ' . para'
+  'footer footer';
+  grid-gap: 10px;
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+#page > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
 }
 
 footer{
     color: black;
-    width: 100vw;
-    height: 10vh;
+
     background-color: aliceblue;
 }
 
